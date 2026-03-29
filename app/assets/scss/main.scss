@@ -1,0 +1,150 @@
+$primary: #1f2937;
+$secondary: #6b7280;
+$accent: #2563eb;
+$bg: #f9fafb;
+$white: #ffffff;
+$border: #e5e7eb;
+
+@mixin text-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: $primary;
+}
+
+@mixin text-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: $secondary;
+}
+
+@mixin text-label {
+  font-size: 13px;
+  color: $primary;
+}
+
+@mixin text-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: $primary;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background: $white;
+}
+
+.car-section {
+  flex: 1;
+
+  .main-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .carousel {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 1%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+
+    width: 450px;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $secondary;
+      border-radius: 10px;
+    }
+
+    img {
+      min-width: 80px;
+      height: 60px;
+      object-fit: cover;
+
+      border: 2px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        border-color: $accent;
+      }
+
+      &.active {
+        border-color: $secondary;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .carousel-wrapper button {
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    justify-items: center;
+  }
+
+  .carousel-wrapper button img {
+    max-width: 40%;
+  }
+}
+
+.info-section {
+  flex: 1;
+
+  .title {
+    @include text-title;
+  }
+
+  .subtitle {
+    @include text-subtitle;
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: $white;
+  }
+
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid $border;
+  }
+
+  td:first-child {
+    @include text-label;
+  }
+
+  td:last-child {
+    @include text-value;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  .nav-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
