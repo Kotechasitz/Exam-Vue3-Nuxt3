@@ -1,60 +1,161 @@
-# Nuxt Starter Template
+# 🚗 Nuxt 3 Frontend Assignment
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+This project is built with **Nuxt 3 + Vue 3 (Options API) + TypeScript + SCSS**.
+It demonstrates multiple frontend features including data processing, UI interaction, and styling.
 
-Use this template to get started with [Nuxt UI](https://ui.nuxt.com) quickly.
+---
 
-- [Live demo](https://starter-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+## 📦 Installation
 
-<a href="https://starter-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-    <img alt="Nuxt Starter Template" src="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png" width="830" height="466">
-  </picture>
-</a>
-
-> The starter template for Vue is on https://github.com/nuxt-ui-templates/starter-vue.
-
-## Quick Start
-
-```bash [Terminal]
-npm create nuxt@latest -- -t ui
-```
-
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=starter&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fstarter&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fstarter-dark.png&demo-url=https%3A%2F%2Fstarter-template.nuxt.dev%2F&demo-title=Nuxt%20Starter%20Template&demo-description=A%20minimal%20template%20to%20get%20started%20with%20Nuxt%20UI.)
-
-## Setup
-
-Make sure to install the dependencies:
+### 1. Clone the repository
 
 ```bash
-pnpm install
+git clone <your-repo-url>
+cd <your-project-name>
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### 2. Install dependencies
 
 ```bash
-pnpm dev
+npm install
 ```
 
-## Production
-
-Build the application for production:
+### 3. Run development server
 
 ```bash
-pnpm build
+npm run dev
 ```
 
-Locally preview production build:
+### 4. Open in browser
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🚀 Usage
+
+At the top navigation bar, click **"Select Page"** to switch between features:
+
+### 🔹 Available Pages
+
+* **1-2**
+
+  * Group By Function
+  * Remove Duplicate Users
+
+* **3**
+
+  * Users Data Table
+  * Sorting (ASC / DESC by age)
+  * Pagination
+
+* **SCSS & Styling**
+
+  * Car showcase layout
+  * Image carousel (active state + navigation)
+  * Table styling (hover + zebra rows)
+
+---
+
+## 🧩 Features
+
+### ✅ Group By Function
+
+* Custom implementation (no external libraries)
+* Filter data by category (e.g., electronics, furniture)
+
+---
+
+### ✅ Remove Duplicates
+
+* No usage of `Set`
+* Duplicate conditions:
+
+  * Same email (case-insensitive)
+  * OR same full name + normalized phone
+
+---
+
+### ✅ Users Table
+
+* Built using **Options API**
+* Features:
+
+  * Dynamic sorting (toggle ASC / DESC)
+  * Pagination
+  * Reusable component (`userList.vue`)
+
+---
+
+### ✅ Car Showcase (SCSS)
+
+* Image carousel:
+
+  * Show 5 thumbnails
+  * Scroll / navigate through images
+  * Active image highlight
+* Table:
+
+  * Hover effect
+  * Zebra row styling
+* SCSS rules:
+
+  * All colors use variables
+  * All text uses mixins
+
+---
+
+## 🎨 SCSS Architecture
+
+* Variables for colors
+* Mixins for typography
+* Modular structure:
+
+  * Layout
+  * Image section
+  * Table section
+
+---
+
+## 📁 Project Structure
 
 ```bash
-pnpm preview
+.
+├── assets/
+│   └── scss/
+│       └── main.scss
+├── components/
+│   └── userList.vue
+├── pages/
+│   ├── index.vue
+│   ├── users/
+│   │   └── index.vue
+│   └── scss.vue
+├── public/
+│   └── img/
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+## 🛠 Tech Stack
+
+* Nuxt 3
+* Vue 3 (Options API)
+* TypeScript
+* SCSS (no UI library)
+
+---
+
+## 📌 Notes
+
+* No external UI libraries are used
+* All logic is implemented manually
+* Designed for clarity, maintainability, and scalability
+
+---
+
+## 👤 Author
+
+Created as part of a frontend technical assessment.
