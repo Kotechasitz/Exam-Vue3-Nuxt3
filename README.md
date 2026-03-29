@@ -10,8 +10,8 @@ It demonstrates multiple frontend features including data processing, UI interac
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
-cd <your-project-name>
+git clone https://github.com/Kotechasitz/Exam-Vue3-Nuxt3.git
+cd kotechasit
 ```
 
 ### 2. Install dependencies
@@ -107,18 +107,6 @@ At the top navigation bar, click **"Select Page"** to switch between features:
 
 ---
 
-## 🎨 SCSS Architecture
-
-* Variables for colors
-* Mixins for typography
-* Modular structure:
-
-  * Layout
-  * Image section
-  * Table section
-
----
-
 ## 📁 Project Structure
 
 ```bash
@@ -153,9 +141,3 @@ At the top navigation bar, click **"Select Page"** to switch between features:
 * No external UI libraries are used
 * All logic is implemented manually
 * Designed for clarity, maintainability, and scalability
-
----
-
-## 👤 Author
-
-Created as part of a frontend technical assessment.
